@@ -59,13 +59,6 @@
     </form>
     <script>
         function change(){
-            // let x =parseInt( document.getElementById("VND").value);
-            // let y =parseInt( document.getElementById("USD").value);
-            // let z =parseInt( document.getElementById("YEN").value);
-            // let t =parseInt( document.getElementById("NDT").value);
-            // let k =parseInt( document.getElementById("EURO").value);
-            // let l =parseInt( document.getElementById("BANGANH").value);
-            
             let a = document.getElementById("moneynumber").value;
             let m = parseInt(document.getElementById("fcurrency").value);
             let n = parseInt(document.getElementById("tcurrency").value);
@@ -77,8 +70,7 @@
 
             document.getElementById("mchanged").innerText = "Số tiền của bạn là: " + (a*m)/n + b;
             
-            // document.getElementById("mchanged").innerHTML
-            //  = b;
+        
             
         }
     </script>
