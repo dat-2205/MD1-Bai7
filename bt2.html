@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi tiền tệ</title>
+    <style>
+        td{
+            padding-left: 50px;
+        }
+        .head{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        table{
+            border-collapse: collapse   ;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <table border="1">
+            <tr class="head">
+                <td>Amount</td>
+                <td>From Currency</td>
+                <td>To Currency</td>
+            </tr>
+            <tr>
+                <td><input type="number" name="moneynumber" id="moneynumber"></td>
+                <td>
+                    <select name="" id="fcurrency">
+                        <option value="1" id="VND" name="VND">VND</option>
+                        <option value="23000" id="USD" name="USD">USD</option>
+                        <option value="209" id="YEN">YEN</option>
+                        <option value="3500" id="NDT">NDT</option>
+                        <option value="27000" id="EURO">EURO</option>
+                        <option value="31200" id="BANGANH">BANGANH</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="" id="tcurrency">
+                        <option value="1" id="VND" name="VND">VND</option>
+                        <option value="23000" id="USD" name="USD">USD</option>
+                        <option value="209" id="YEN">YEN</option>
+                        <option value="3500" id="NDT">NDT</option>
+                        <option value="27000" id="EURO">EURO</option>
+                        <option value="31200" id="BANGANH">BANGANH</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" name="convert" onclick="change()">Convert</button>
+                </td>
+                <tr>
+                    <td colspan="4" id="mchanged"><p>Số tiền của bạn là:</p> </td>
+                </tr>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function change(){
+            // let x =parseInt( document.getElementById("VND").value);
+            // let y =parseInt( document.getElementById("USD").value);
+            // let z =parseInt( document.getElementById("YEN").value);
+            // let t =parseInt( document.getElementById("NDT").value);
+            // let k =parseInt( document.getElementById("EURO").value);
+            // let l =parseInt( document.getElementById("BANGANH").value);
+            
+            let a = document.getElementById("moneynumber").value;
+            let m = parseInt(document.getElementById("fcurrency").value);
+            let n = parseInt(document.getElementById("tcurrency").value);
+            
+            
+            
+            let e = document.getElementById("tcurrency");
+            let b = e.options[e.selectedIndex].text;
+
+            document.getElementById("mchanged").innerText = "Số tiền của bạn là: " + (a*m)/n + b;
+            
+            // document.getElementById("mchanged").innerHTML
+            //  = b;
+            
+        }
+    </script>
+</body>
+</html>
