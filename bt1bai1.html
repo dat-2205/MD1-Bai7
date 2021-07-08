@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điểm trung bình</title>
+    <style>
+        td{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div style="padding: auto;">
+        <form action="">
+            <h1>Tính điểm trung bình ở đây</h1>
+            <table border="1" style="border-collapse: collapse;">
+                <tr>
+                    <td><label for="Ly">Nhập điểm Vật Lý</label></td>
+                    <td><input type="text"  name="diemly" id="Ly"></td>
+                </tr>
+                <tr>
+                    <td><label for="Hoa">Nhập điểm Hoá Học</label></td>
+                    <td><input type="text" name="diemhoa" id="Hoa"></td>
+                </tr>
+                <tr>
+                    <td><label for="Sinh">Nhập điểm Sinh Học</label></td>
+                    <td><input type="text" name="diemsinh" id="Sinh"></td>
+                </tr>
+                <tr>
+                    <td ><button type="button" name="submit" id="submit" onclick="diemTB()">Tính TB</button></td>
+                    <td><div id="diemtb"></div></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function diemTB(){
+            let x,y,z;
+
+            x = document.getElementById("Ly").value;
+            y = document.getElementById("Hoa").value;
+            z = document.getElementById("Sinh").value;
+
+            let x1 = parseInt(x)
+            let y1 = parseInt(y)
+            let z1 = parseInt(z)
+
+
+            let tb = (x1+y1+z1)/3;
+
+            document.getElementById("diemtb").innerHTML = "Điểm trung bình của bạn là:  " + tb;
+        }
+    </script>
+</body>
+</html>

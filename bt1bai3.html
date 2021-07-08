@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính diện tích va chu vi hình tròn</title>
+</head>
+<body>
+    <form action="" style="margin-left:40%">
+        <p>Nhập bán kính hình tròn:</p>
+        <input type="number" name="bankinh" id="bankinh">
+        <button type="button" name="button" onclick="math()">Tính</button>
+        <div id="dientich"></div>
+        <div id="chuvi"></div>
+
+    </form>
+    <script>
+        function math(){
+            let r = parseInt(document.getElementById("bankinh").value);
+
+            let s = r*r*3.14;
+            let c = 2*r*3.14;
+
+            document.getElementById("dientich").innerText="Diện tích hình tròn là:  " + s;
+            document.getElementById("chuvi").innerText="Chu vi hình tròn là:  " + c;
+        }
+    </script>
+</body>
+</html>
