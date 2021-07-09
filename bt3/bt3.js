@@ -1,7 +1,9 @@
-// function clear(){
-//      document.getElementById("output").innerHTML = "11111";
-//
-// }
+let isMath = false;
+
+function clear(){
+     document.getElementById("output").innerHTML = "0";
+
+}
 function ACbutton() {
     document.getElementById("output").innerHTML = '0';
 }
@@ -13,8 +15,14 @@ function removezero(){
     }
 }
 function getchar(value){
-    removezero()
-    document.getElementById("output").innerHTML += value;
+    if(isMath){
+        document.getElementById("output").innerHTML = value;
+        isMath = false;
+    }else {
+        removezero()
+        document.getElementById("output").innerHTML += value;
+    }
+
 }
 function getpercent(){
     removezero()
@@ -27,5 +35,6 @@ function math(){
     removezero()
     let getnum = document.getElementById("output").innerHTML;
     let result = eval(getnum);
+    isMath = true;
     document.getElementById("output").innerHTML = result;
 }
