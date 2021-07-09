@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+    <link rel="stylesheet" href="bt3.css">
+</head>
+<body>
+  <div class="container">
+    <div class="display">
+      <p id="output">0</p>
+    </div>
+    <div class="keyboard">
+      <div class="firt-row row">
+        <button onclick="ACbutton()">AC</button>
+        <button onclick="getchar('(')">(</button>
+        <button onclick="getchar(')')">)</button>
+        <button onclick="getchar('-')">-</button>
+      </div>
+      <div class="sec-row row">
+        <button onclick="getchar('7')">7</button>
+        <button onclick="getchar('8')">8</button>
+        <button onclick="getchar('9')">9</button>
+        <button onclick="getchar('+')">+</button>
+      </div>
+      <div class="thir-row row">
+        <button onclick="getchar('4')">4</button>
+        <button onclick="getchar('5')">5</button>
+        <button onclick="getchar('6')">6</button>
+        <button onclick="getchar('*')">x</button>
+      </div>
+      <div class="four-row row">
+        <button onclick="getchar('1')">1</button>
+        <button onclick="getchar('2')">2</button>
+        <button onclick="getchar('3')">3</button>
+        <button onclick="getchar('/')">/</button>
+      </div>
+      <div class="fived-row row">
+        <button onclick="getchar('0')">0</button>
+        <button onclick="getchar('.')">.</button>
+        <button onclick="getpercent()">%</button>
+        <button onclick="math()">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="bt3.js">
+  </script>
+</body>
+</html>
