@@ -22,7 +22,6 @@ function getchar(value){
         removezero()
         document.getElementById("output").innerHTML += value;
     }
-
 }
 function getpercent(){
     removezero()
@@ -31,10 +30,15 @@ function getpercent(){
     document.getElementById("output").innerHTML = p2;
 }
 function math(){
-    debugger
     removezero()
     let getnum = document.getElementById("output").innerHTML;
     let result = eval(getnum);
     isMath = true;
     document.getElementById("output").innerHTML = result;
+}
+
+function del() {
+    let sokytu = document.getElementById("output").innerHTML.length;
+    document.getElementById("output").innerHTML = document.getElementById("output").innerHTML.slice(0,sokytu-1);
+    sokytu -= sokytu;
 }
